@@ -10,8 +10,8 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Load the gender prediction model
 gender_net = cv2.dnn.readNetFromCaffe(
-    r'C:\Users\shashank\OneDrive\Documents\Desktop\Face Detection\gender_deploy.prototxt', 
-    r'C:\Users\shashank\OneDrive\Documents\Desktop\Face Detection\gender_net.caffemodel')
+    r'Path To gender_deploy.prototxt', 
+    r'Path To gender_net.caffemodel')
 
 # Define the list of gender types the model recognizes
 gender_list = ['Male', 'Female']
@@ -58,5 +58,5 @@ def detect_face_and_gender(img):
     cv2.waitKey()
 
 # Test the function
-img = cv2.imread('male and female.jpg')
+img = cv2.imread('man.jpg')
 detect_face_and_gender(img)
